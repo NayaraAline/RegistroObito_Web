@@ -40,9 +40,9 @@ var dados = []
     function PopulaTabela() {
         if (Array.isArray(dados)) {
     
-           localStorage.setItem("__dados__", JSON.stringify(dados))
+           sessionStorage.setItem("__dados__", JSON.stringify(dados))
     
-            $("#tblDados tbody").html("")
+   
     
             dados.forEach(function(item) {
                 //TEMPLATE STRING

@@ -20,7 +20,7 @@ var dados = []
     
         dados.forEach(function(item) {
             if (item.id == id) {
-                $("#hdid").val(item.id)
+                $("#hdID").val(item.id)
                 $("#validationNome").val(item.nome)
                 $("#validationData").val(item.data.substr(6, 4) + "-" + item.data.substr(3, 2) + "-" + item.data.substr(0, 2))
                 $("#validationLivro").val(item.livro)
@@ -91,6 +91,7 @@ var dados = []
             if (nome == '' || data == '' || livro == '' || folha == '' || termo == '' || filiação1 == '' || filiação2 == '' || cpf == '') {
                 alert("Por favor preencha todos os campos.");
                 return false;
+                
             } else {
                 registro.nome = nome
                 registro.data = data
@@ -101,14 +102,17 @@ var dados = []
                 registro.filiação2 = filiação2
                 registro.cpf = cpf
                 registro.rg = rg
-    
                 registro.id = dados.length + 1
-    
+
                 dados.push(registro)
-    
+             
                 alert("Registro Salvo com sucesso")
+                PopulaTabela()
                 $("modalRegistro").modal("hide")
     
+
+
+
             }
     
     

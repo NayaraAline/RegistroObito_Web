@@ -55,8 +55,6 @@ var dados = []
                     <td>${item.termo}</td>
                     <td style="text-align: center;" ><button type="button" class="btn btn-danger button-registro" onclick="javascript:ApagaRegistro(${item.id});"><i class="fa fa-trash"/></button> 
                                                      <button type="button" class="btn btn-primary button-registro"  onclick="javascript:EditaRegistro(${item.id});"><i class="fa fa-edit"/></button></td>
-                    
-                  
                 </br>`)
             })
         }
@@ -99,7 +97,21 @@ var dados = []
                     registro.rg = rg
 
                     registro.id = dados.length + 1
+
                     dados.push(registro)
+
+
+                    alert("Registro Salvo com sucesso")
+
+                    //LIMPEZA DOS CAMPOS
+                    $("#validationNome").val("")
+                    $("#validationData").val("")
+                    $("#validationLivro").val("")
+                    $("#validationFolha").val("")
+                    $("#validationTermo").val("")
+
+                    PopulaTabela()
+
                 }
 
                 
@@ -123,17 +135,6 @@ var dados = []
                 PopulaTabela()
                 $("modalRegistro").modal("hide")
     
-        
-    
-            //LIMPEZA DOS CAMPOS
-            $("#validationNome").val("")
-            $("#validationData").val("")
-            $("#validationLivro").val("")
-            $("#validationFolha").val("")
-            $("#validationTermo").val("")
-    
-            PopulaTabela()
-       
     
     })
     

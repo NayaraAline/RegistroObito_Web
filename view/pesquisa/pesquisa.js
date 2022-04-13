@@ -86,35 +86,47 @@ var dados = []
             let rg = $("#validationRg").val()
     
     
-            let registro = {}
-    
-            if (nome == '' || data == '' || livro == '' || folha == '' || termo == '' || filiação1 == '' || filiação2 == '' || cpf == '') {
-                alert("Por favor preencha todos os campos.");
-                return false;
-                
-            } else {
-                registro.nome = nome
-                registro.data = data
-                registro.livro = livro
-                registro.folha = folha
-                registro.termo = termo
-                registro.filiação1 = filiação1
-                registro.filiação2 = filiação2
-                registro.cpf = cpf
-                registro.rg = rg
-                registro.id = dados.length + 1
+            
 
-                dados.push(registro)
+
+                if (!_id || _id == "0"){
+                    let registro = {}
+                    registro.nome = nome
+                    registro.data = data
+                    registro.livro = livro
+                    registro.folha = folha
+                    registro.termo = termo
+                    registro.filiação1 = filiação1
+                    registro.filiação2 = filiação2
+                    registro.cpf = cpf
+                    registro.rg = rg
+
+                    registro.id = dados.length + 1
+                    dados.push(registro)
+                }
+
+                
+                else {
+                    dados.forEach(function(item){
+                        if (item.id == id) {
+                            item.nome == nome
+                            item.data == data
+                            item.livro == livro
+                            registro.folha == folha
+                            registro.termo == termo
+                            registro.filiação1 == filiação1
+                            registro.filiação2 == filiação2
+                            registro.cpf == cpf
+                            registro.rg == rg
+                        }
+                    })
+                }
              
                 alert("Registro Salvo com sucesso")
                 PopulaTabela()
                 $("modalRegistro").modal("hide")
     
-
-
-
-            }
-    
+        
     
             //LIMPEZA DOS CAMPOS
             $("#validationNome").val("")
@@ -124,7 +136,7 @@ var dados = []
             $("#validationTermo").val("")
     
             PopulaTabela()
-        })
+       
     
     })
     
@@ -167,4 +179,4 @@ var dados = []
         });
     });
     
-    
+})

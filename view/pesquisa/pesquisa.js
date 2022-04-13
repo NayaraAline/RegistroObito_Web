@@ -1,4 +1,3 @@
-$(document).ready(function() {
 var dados = []
     
     //   FUNÇÃO APAGAR REGISTRO   //
@@ -75,7 +74,7 @@ var dados = []
             //EVENTO CLICK DO BOTÃO SALVAR 
     
     
-            let_id = $("#hdID").val()
+            let _id = $("#hdID").val()
             let nome = $("#validationNome").val()
             let data = new Date($("#validationData").val()).toLocaleDateString("pt-br", { timeZone: "UTC" })
             let livro = $("#validationLivro").val()
@@ -111,6 +110,7 @@ var dados = []
                 $("modalRegistro").modal("hide")
     
             }
+    
     
             //LIMPEZA DOS CAMPOS
             $("#validationNome").val("")
@@ -164,4 +164,3 @@ var dados = []
     });
     
     
-})

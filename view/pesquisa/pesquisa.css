@@ -1,0 +1,99 @@
+
+
+.background-active {
+    background-color: rgba(255, 255, 255, 0.589);
+}
+
+.portar-container-conteudo {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.text-title-container {
+    font-size: 40px;
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.modal-dialog{
+    max-width: 700px;
+}
+
+.modal-body{
+    padding: 30px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.row-filter {
+    width: 100%;
+}
+
+.text-title-table {
+    background-color: rgba(0, 0, 0, 0.075);
+    color: black;
+    text-align: left;
+    padding: 3px;
+}
+
+.text-content-table {
+    text-align: left;
+    padding: 3px;
+}
+
+tr:nth-child(even) {
+    background-color: #ebe9e96b
+}
+
+.text-label-formu {
+    margin-bottom: 0px;
+}
+
+.form-control {
+    height: calc(25px + 2px) !important;
+    padding: 0rem 5px;
+}
+
+.input-group-text {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #e9ecef00;
+    border: none;
+    height: 30px;
+}
+
+.btn-cadastrar {
+    background-color: rgb(248, 183, 50);
+    border-color: rgb(248, 183, 50);
+    padding: 2.4px 14px;
+    margin-bottom: 10px;
+}
+
+.btn-cadastrar:hover {
+    background-color: rgb(47, 117, 181);
+}
+
+.table thead th{
+    padding: 0.2rem;
+}
+
+.table tbody td{
+    padding: 0.1rem;
+}
+.table>:not(:first-child){
+    border-top: 1px solid currentColor;
+}
+
+.button-registro{
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+

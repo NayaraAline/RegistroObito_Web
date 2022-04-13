@@ -1,0 +1,274 @@
+.menu-occupation {
+    padding-top: 0px;
+    background-image: url('../../res/usuário.png');
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 180px;
+    float: center;
+    margin-left: 48px;
+}
+
+.portal-container {
+    position: fixed;
+    top: 20px;
+    left: 200px;
+    right: -10px;
+    bottom: 0px;
+    padding: 10px;
+    overflow: auto;
+}
+
+.portal-title {
+    position: absolute;
+    top: 0px;
+    left: 240px;
+    right: 0px;
+    height: 35px;
+    padding: 10px;
+    font-size: x-large;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.menu {
+    background-image: url('../../res/background-menu.png');
+    color: black;
+    width: 240px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 5;
+    outline: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-consulting {
+    position: fixed;
+    z-index: 5;
+    bottom: 25px;
+    left: 20px;
+    height: 30px;
+    width: 200px;
+    border: none;
+    background: url('') no-repeat right;
+    -ms-background-size: contain;
+    -o-background-size: contain;
+    -moz-background-size: contain;
+    -webkit-background-size: contain;
+}
+
+.menu-items {
+    position: relative;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    flex-direction: column;
+    display: flex;
+    overflow: auto;
+    text-decoration: none;
+}
+
+.menu-item:hover {
+    background: rgba(255, 255, 255, 0.5) !important;
+}
+
+.menu-tabs {
+    background: rgb(248, 183, 50);
+    position: fixed;
+    top: 0px;
+    left: 240px;
+    right: 0px;
+    height: 7px;
+}
+
+.menu-tab-item {
+    background: rgb(178, 178, 178) !important;
+}
+
+.menu-tab-close:hover {
+    color: #ff0000;
+}
+
+.menu-tab-active {
+    visibility: visible;
+}
+
+.menu-tab-inactive {
+    visibility: hidden;
+}
+
+.nav-item a {
+    color: #d8d8d8
+}
+
+.nav-item a:houver {
+    color: #FFFFFF !important
+}
+
+.menu-title-large {
+    font-weight: normal;
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 1.5em;
+    display: block;
+    height: 60px;
+}
+
+.menu-title-small {
+    display: none;
+}
+
+.menu-title {
+    content: 'Consulta Fácil';
+    font-weight: normal;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.menu-logo {
+    position: fixed;
+    bottom: 20px;
+    left: 0px;
+    height: 42px;
+    width: 240px;
+    border: none;
+    /** background: url('/portal/res/logo-img.png');**/
+    -ms-background-size: contain;
+    -o-background-size: contain;
+    -moz-background-size: contain;
+    -webkit-background-size: contain;
+}
+
+.menu .avatar {
+    padding: 0.5em 0.5em 2em 0.5em;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.menu .avatar img {
+    width: 90%;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0.5em 0;
+    margin: 0;
+}
+
+.menu ul li {
+    padding: 0.5em 1em 0.5em 1em;
+    font-size: 1.1em;
+    line-height: 200%;
+    font-weight: regular;
+    background-repeat: no-repeat;
+    background-position: left 15px center;
+    background-size: auto 20px;
+    transition: all 0.15s linear;
+    cursor: pointer;
+}
+
+.menu ul li:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.menu ul li:focus {
+    outline: none;
+}
+
+@media screen and (max-height:740px) {
+    .logo-gestao {
+        display: none;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .portal-container {
+        left: 90px;
+    }
+    .portal-title {
+        left: 90px;
+    }
+    .menu {
+        width: 90px;
+    }
+    .menu-occupation {
+        visibility: hidden;
+    }
+    .menu-title-small {
+        font-weight: normal;
+        margin-bottom: 0;
+        text-align: center;
+        display: block;
+    }
+    .menu-title-large {
+        display: none;
+    }
+    .menu-logo {
+        position: fixed;
+        bottom: 20px;
+        left: 0px;
+        height: 40px;
+        width: 90px;
+        /*background: url('../../../resources/images/algar-logo-short-color.png')*/
+        -ms-background-size: contain;
+        -o-background-size: contain;
+        -moz-background-size: contain;
+        -webkit-background-size: contain;
+    }
+    .menu .avatar {
+        padding: 0.5em;
+        position: relative;
+    }
+    .menu .avatar h5 {
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 100px;
+        margin: 0;
+        min-width: 200px;
+        border-radius: 4px;
+        background: rgba(0, 0, 0, 0.4);
+        transform: translate3d(-20px, -50%, 0);
+        transition: all 0.15s ease-in-out;
+    }
+    .menu .avatar:hover h5 {
+        opacity: 1;
+        transform: translate3d(0px, -50%, 0);
+    }
+    .menu ul li {
+        height: 60px;
+        background-position: center center;
+        background-size: 30px auto;
+        position: relative;
+    }
+    .menu ul li span {
+        opacity: 0;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 0.2em 0.5em;
+        border-radius: 4px;
+        top: 50%;
+        left: 80px;
+        transform: translate3d(-15px, -50%, 0);
+        transition: all 0.15s ease-in-out;
+        width: fit-content;
+    }
+    .menu ul li span:before {
+        content: '';
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: 50%;
+        left: -5px;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-right: 5px solid rgba(0, 0, 0, 0.5);
+        transform: translateY(-50%);
+    }
+    .menu ul li:hover span {
+        opacity: 1;
+        transform: translate3d(0px, -50%, 0);
+    }
+}

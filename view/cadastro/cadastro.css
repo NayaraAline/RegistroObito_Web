@@ -1,0 +1,84 @@
+.row {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+h2 {
+    color: #008080;
+}
+
+h3 {
+    color: #008080;
+}
+
+option:empty {
+    display: none;
+}
+
+.tooltip .arrow:before {
+    visibility: hidden;
+}
+
+.tooltip .arrow {
+    visibility: hidden;
+}
+
+.text-title-container {
+    font-size: 40px;
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 10px;
+    margin-top: -5px;
+}
+
+.background-active {
+    background-color: rgba(255, 255, 255, 0.589);
+}
+
+.line-title-container {
+    background: rgb(248, 183, 50);
+    height: 1px;
+    width: 500px;
+}
+
+.text-sub-home {
+    font-size: 23px;
+    margin-left: 15px;
+}
+
+.portar-container-conteudo {
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.text-label-formu {
+    margin-bottom: 0px;
+}
+
+.form-control {
+    height: calc(25px + 2px) !important;
+    padding: 0rem 5px;
+}
+
+.form-control-registros {
+    width: 130px !important;
+}
+
+.form-cadastro-certidão {
+    margin-top: 20px;
+}
+
+.form-registros {
+    padding-left: 0px;
+}
+
+.btn-cadastrar {
+    background-color: rgb(248, 183, 50);
+    border-color: rgb(248, 183, 50);
+    padding: 5px 20px;
+    margin-bottom: 10px;
+}
+
+.btn-cadastrar:hover {
+    background-color: rgb(47, 117, 181);
+}

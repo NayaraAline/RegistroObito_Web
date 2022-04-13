@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Registra Obito</title>
+        <meta charset="utf-8">
+    
+        <meta http-equiv="Content-Security-Policy" content="default-src *; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'; img-src * data: 'unsafe-inline'; connect-src * 'unsafe-inline'; frame-src *;">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="author" content="Roma Consulting">
+        <meta name="description" content="Registra Obito">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/png" href="/../favicon.png" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="../../third-party/fontawesome/v6.0.0/css/all.min.css">
+
+
+        
+        <!--Styles -->
+        <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    </head>
+
+    <link rel="stylesheet" href="./login.css">
+
+<body>
+    <!-- Layout -->
+
+<body>
+    <div class="login-background">
+        <div id="pnlLogin" class="login-panel">
+            <div class="login-form float-right">
+
+
+                <div cz-shortcut-listen="true">
+                    <form class="form-signin" method="post">
+                        <label for="txtLogin" class="login-form-label">E-mail:</label>
+                        <label for="inputEmail" class="sr-only " required autofocus>Email address</label>
+                        <input type="email" id="inputEmail" name="email" class="form-control login-form-input" placeholder="Email address" required="" autofocus="">
+                        <label for="txtLogin" class="login-form-label">Senha:</label>
+                        <label for="inputPassword" class="sr-only" required autofocus>Password</label>
+                        <input type="password" id="inputPassword" name="senha" class="form-control" placeholder="Password" required="">
+                        <div class="checkbox mb-3">
+                            <label>
+                              <input type="checkbox" value="remember-me"> Remember me
+                            </label>
+                            <div a style="font-size: 13px;"> Esqueceu a senha</a>
+                            </div>
+                        </div>
+                        <a href="../../view/cadastro/cadastro.html"><button type="button" style="text-decoration: none;color: black; margin-bottom: 10px;" class="btn btn-info btn-entrar btn-sm" type="submit">
+                               <i class="fas fa-sign-in-alt"></i>&nbsp;&nbsp;&nbsp;Entrar
+                            </button></a>
+                        <button type="button" style="text-decoration: none;color: black;" class="btn btn-info btn-cadastrar btn-sm" type="submit" data-toggle="modal" data-target="#modalNovoCadastro">
+                             <i class="fas fa-plus" ></i>&nbsp;&nbsp;Cadastrar
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-----------MODAL-------------->
+    <div class="modal fade" id="modalNovoCadastro" tabindex="-1" role="dialog" aria-labelledby="modalNovoCadastroLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header background-color-modal">
+                    <h5 class="modal-title" id="modalNovoCadastroLabel">Novo cadastro</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+                </div>
+                <div class="modal-body">
+                    <form id="meuForm" method="post" class=" g-3 needs-validation f1">
+                        <div class="row">
+                            <div class="col-md-8" style="padding-left: 15px;">
+                                <label for="validationNomeCartorio" class="form-label">Nome Cartório:</label>
+                                <input type="text" class="form-control" id="nomecartorio" name="nomeCartorio" maxlength="30" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="validationTelefone" class="form-label">Telefone</label>
+                                <input type="text" class="form-control" id="phone" name="phone" placeholder="(99) 99999-9999" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label class="text-label-formu" for="inputState" required>Estado:</label>
+                                <select id="estado" name="estado" class="form-control" required>
+                          <option selected>Escolher..</option>
+                          <option>Acre (AC)</option>
+                          <option>Alagoas (AL)</option>
+                          <option>Amapá (AP)</option>
+                          <option>Amazonas (AM)</option>
+                          <option>Bahia (BA)</option>
+                          <option>Ceará (CE)</option>
+                          <option>Distrito Federal (DF)</option>
+                          <option>Espírito Santo (ES)</option>
+                          <option>Goiás (GO)</option>
+                          <option>Maranhão (MA)</option>
+                          <option>Mato Grosso (MT)</option>
+                          <option>Mato Grosso do Sul (MS)</option>
+                          <option>Minas Gerais (MG)</option>
+                          <option>Pará (PA)</option>
+                          <option>Paraíba (PB)</option>
+                          <option>Paraná (PR)</option>
+                          <option>Pernambuco (PE)</option>
+                          <option>Piauí (PI)</option>
+                          <option>Rio de Janeiro (RJ)</option>
+                          <option>Rio Grande do Norte (RN)</option>
+                          <option>Rio Grande do Sul (RS)</option>
+                          <option>Rondônia (RO)</option>
+                          <option>Roraima (RR)</option>
+                          <option>Santa Catarina (SC)</option>
+                          <option>São Paulo (SP)</option>
+                          <option>Sergipe (SE)</option>
+                          <option>Tocantins (TO)</option>
+                        </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class="text-label-formu" for="inputState">Cidade:</label>
+                                <select id="cidade" name="cidade" class="form-control">
+                          <option selected>Escolher..</option>
+                          <option>Acre (AC)</option>
+                          <option>Alagoas (AL)</option>
+                          <option>Amapá (AP)</option>
+                          <option>Amazonas (AM)</option>
+                          <option>Bahia (BA)</option>
+                          <option>Ceará (CE)</option>
+                          <option>Distrito Federal (DF)</option>
+                          <option>Espírito Santo (ES)</option>
+                          <option>Goiás (GO)</option>
+                          <option>Maranhão (MA)</option>
+                          <option>Mato Grosso (MT)</option>
+                          <option>Mato Grosso do Sul (MS)</option>
+                          <option>Minas Gerais (MG)</option>
+                          <option>Pará (PA)</option>
+                          <option>Paraíba (PB)</option>
+                          <option>Paraná (PR)</option>
+                          <option>Pernambuco (PE)</option>
+                          <option>Piauí (PI)</option>
+                          <option>Rio de Janeiro (RJ)</option>
+                          <option>Rio Grande do Norte (RN)</option>
+                          <option>Rio Grande do Sul (RS)</option>
+                          <option>Rondônia (RO)</option>
+                          <option>Roraima (RR)</option>
+                          <option>Santa Catarina (SC)</option>
+                          <option>São Paulo (SP)</option>
+                          <option>Sergipe (SE)</option>
+                          <option>Tocantins (TO)</option>
+                        </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6" style="padding-left: 15px;">
+                                <label for="cep" class="form-label">Cep:</label>
+                                <input class="form-control" id="cep" name="cep" type="text" maxlength="8" required>
+                            </div>
+                            <div class="col-md-6 ">
+                                <label for="validationBairro " class="form-label ">Bairro:</label>
+                                <input type="text " class="form-control" id="bairro" name="bairro" maxlength="15" required>
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class="col-md-6 " style="padding-left: 15px; ">
+                                <label for="validationRua " class="form-label ">Rua:</label>
+                                <input type="text " class="form-control" id="rua" name="rua" maxlength="15" required>
+                            </div>
+                            <div class="col-md-1" style="padding-left: 0px; padding-right: 0px;">
+                                <label for="validationN " class="form-label ">Nº:</label>
+                                <input type="number " class="form-control" id="validationN" name="validationN" maxlength="5" required>
+                            </div>
+                            <div class="col-md-5 ">
+                                <label for="validationComple " class="form-label ">Complemento:</label>
+                                <input type="text " class="form-control" id="complemento" name="complemento" maxlength="15" required>
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class="col-md-12 " style="padding-left: 15px; ">
+                                <label for="validationRua " class="form-label ">Email:</label>
+                                <input type="text" class="form-control" id="email" name="email" maxlength="40" required>
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class="col-md-6 " style="padding-left: 15px; ">
+                                <label for="senha1" class="form-label ">Senha:</label>
+                                <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha" maxlength="15" required>
+                            </div>
+                            <div class="col-md-6 " style="padding-left: 15px; ">
+                                <label for="senha1" class="form-label">Repetir senha:</label>
+                                <input type="password" class="form-control" id="repetiSenha" name="repetiSenha" placeholder="Confirme Senha" maxlength="15" required>
+                            </div>
+                        </div>
+                        <div class="modal-footer ">
+                            <button type="button " class="btn btn-secondary button-fechar-modal " data-dismiss="modal ">Fechar</button>
+                            <button type="submit" value="Validar" class="btn btn-primary button-salvar-modal" onClick="validarSenha()">Salvar</button>
+                        </div>
+
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
+<script src="../../view/cadastro/cadastro.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
+
+<script src="../../view/login/login.js"></script>
+</body>
+
+</html>

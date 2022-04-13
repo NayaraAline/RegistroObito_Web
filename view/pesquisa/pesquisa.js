@@ -139,7 +139,7 @@ var dados = []
     
     
     
-    /**
+  
     $(document).ready(function() {
         $("input[name=s]").bind('input', function() {
             var s = $(this).val().length;
@@ -174,6 +174,6 @@ var dados = []
         $("#tblDados input").blur(function() {
             $(this).val("");
         });
-    }); */
+    });
     
 })

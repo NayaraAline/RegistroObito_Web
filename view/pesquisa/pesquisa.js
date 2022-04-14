@@ -40,9 +40,9 @@ var dados = []
     function PopulaTabela() {
         if (Array.isArray(dados)) {
     
-           sessionStorage.setItem("__dados__", JSON.stringify(dados))
+           localStorage.setItem("__dados__", JSON.stringify(dados))
     
-   
+            $("#tblDados tbody").html("")
     
             dados.forEach(function(item) {
                 //TEMPLATE STRING
@@ -55,14 +55,20 @@ var dados = []
                     <td>${item.termo}</td>
                     <td style="text-align: center;" ><button type="button" class="btn btn-danger button-registro" onclick="javascript:ApagaRegistro(${item.id});"><i class="fa fa-trash"/></button> 
                                                      <button type="button" class="btn btn-primary button-registro"  onclick="javascript:EditaRegistro(${item.id});"><i class="fa fa-edit"/></button></td>
+                    
+                  
                 </br>`)
             })
         }
     }
     
     $(function () {
-        //EXECUTA AO CARREGAR DA TELA
-        dados = JSON.parse(localStorage.getItem("__dados__"))
+        // EXECUTA AO CARREGAR  A TELA
+            dados = JSON.parse(localStorage.getItem("__dados__"));
+          
+            if (dados != null) {
+              PopulaTabela();
+            } else {dados = []}
     
         if (dados) {
             PopulaTabela()
@@ -84,63 +90,68 @@ var dados = []
             let rg = $("#validationRg").val()
     
     
-                if (!_id || _id == "0"){
-                    let registro = {}
-                    registro.nome = nome
-                    registro.data = data
-                    registro.livro = livro
-                    registro.folha = folha
-                    registro.termo = termo
-                    registro.filiação1 = filiação1
-                    registro.filiação2 = filiação2
-                    registro.cpf = cpf
-                    registro.rg = rg
-
+            let registro = {}
+    
+            if (nome == '' || data == '' || livro == '' || folha == '' || termo == '' || filiação1 == '' || filiação2 == '' || cpf == '') {
+                alert("Por favor preencha todos os campos.");
+                return false;
+            } else {
+                registro.nome = nome
+                registro.data = data
+                registro.livro = livro
+                registro.folha = folha
+                registro.termo = termo
+                registro.filiação1 = filiação1
+                registro.filiação2 = filiação2
+                registro.cpf = cpf
+                registro.rg = rg
+    
+                registro.id = dados.length + 1
+    
+                dados.push(registro)
+    
+                alert("Registro Salvo com sucesso")
+              
+    
+                if (!_id || _id == "0") {
                     registro.id = dados.length + 1
-
                     dados.push(registro)
-
-
-                    alert("Registro Salvo com sucesso")
-
-                    //LIMPEZA DOS CAMPOS
-                    $("#validationNome").val("")
-                    $("#validationData").val("")
-                    $("#validationLivro").val("")
-                    $("#validationFolha").val("")
-                    $("#validationTermo").val("")
-
-                    PopulaTabela()
-
-                }
-
-                
-                else {
-                    dados.forEach(function(item){
-                        if (item.id == id) {
-                            item.nome == nome
-                            item.data == data
-                            item.livro == livro
-                            registro.folha == folha
-                            registro.termo == termo
-                            registro.filiação1 == filiação1
-                            registro.filiação2 == filiação2
-                            registro.cpf == cpf
-                            registro.rg == rg
+                } else {
+                    dados.forEach(function(item) {
+                        if (item.id == _id) {
+                            item.nome = nome
+                            registro.data = data
+                            registro.livro = livro
+                            registro.folha = folha
+                            registro.termo = termo
+                            registro.filiação1 = filiação1
+                            registro.filiação2 = filiação2
+                            registro.cpf = cpf
+                            registro.rg = rg
                         }
                     })
                 }
-             
                 alert("Registro Salvo com sucesso")
-                PopulaTabela()
                 $("modalRegistro").modal("hide")
     
+            }
+    
+    
+            //LIMPEZA DOS CAMPOS
+            $("#validationNome").val("")
+            $("#validationData").val("")
+            $("#validationLivro").val("")
+            $("#validationFolha").val("")
+            $("#validationTermo").val("")
+    
+            PopulaTabela()
+        })
     
     })
     
     
     
-  
+    
     $(document).ready(function() {
         $("input[name=s]").bind('input', function() {
             var s = $(this).val().length;
@@ -177,4 +188,3 @@ var dados = []
         });
     });
     
-})

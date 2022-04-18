@@ -108,5 +108,13 @@ option:empty {
     .form-inline .form-control{
         width: 130px;
     }
+}
 
+@media screen and (max-width: 768px){
+    .portar-container-conteudo {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+   
+    
 }

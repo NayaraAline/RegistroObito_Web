@@ -53,11 +53,11 @@ var dados = []
                     <td>${item.livro}</td>
                     <td>${item.folha}</td>
                     <td>${item.termo}</td>
-                    <td style="text-align: center;" ><button type="button" class="btn btn-danger button-registro" onclick="javascript:ApagaRegistro(${item.id});"><i class="fa fa-trash"/></button> 
-                                                     <button type="button" class="btn btn-primary button-registro"  onclick="javascript:EditaRegistro(${item.id});"><i class="fa fa-edit"/></button></td>
+                    <td style="text-align: center;"><button type="button" class="btn btn-danger button-registro"  onclick="javascript:ApagaRegistro(${item.id});"><i class="fa fa-trash"/></button></td> 
+                                                    <td><button type="button" class="btn btn-primary button-registro"  onclick="javascript:EditaRegistro(${item.id});"><i class="fa fa-edit"/></button></td>
                     
                   
-                </br>`)
+                </tr>`)
             })
         }
     }
@@ -70,9 +70,7 @@ var dados = []
               PopulaTabela();
             } else {dados = []}
     
-        if (dados) {
-            PopulaTabela()
-        }
+       
     
         $("#btnSalvar").click(function() {
             //EVENTO CLICK DO BOTÃO SALVAR 
@@ -105,12 +103,6 @@ var dados = []
                 registro.filiação2 = filiação2
                 registro.cpf = cpf
                 registro.rg = rg
-    
-                registro.id = dados.length + 1
-    
-                dados.push(registro)
-    
-                alert("Registro Salvo com sucesso")
               
     
                 if (!_id || _id == "0") {
@@ -187,4 +179,5 @@ var dados = []
             $(this).val("");
         });
     });
+    
     

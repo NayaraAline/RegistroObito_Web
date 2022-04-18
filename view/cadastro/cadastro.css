@@ -116,5 +116,34 @@ option:empty {
         margin-right: 15px;
     }
    
+}
+
+@media screen and (max-width: 450px){
+
+    .text-title-container {
+        font-size: 23px;
+    }
     
+    .text-sub-home {
+        font-size: 17px;
+        margin-left: 10px;
+    }
+    .img-responsivo{
+        height: 25px;
+    }
+
+    .style-responsivo{
+        padding-left: 0px;
+    }
+    
+
+    .col-form-label {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        margin-bottom: 0;
+    }
+
+    .form-inline .form-control {
+        width: 295px;
+    }
 }

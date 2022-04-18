@@ -272,3 +272,9 @@
         transform: translate3d(0px, -50%, 0);
     }
 }
+
+@media screen and (max-width: 450px){
+    .menu-tabs {
+        position: inherit;
+    }
+}

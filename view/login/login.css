@@ -115,6 +115,9 @@
     background-color: rgb(240, 243, 243);
     color: black;
 }
+.edit-complement{
+    padding-left: 0px;
+}
 
 
 /*****************RESOLUÇÕES DE TELAS****************************/
@@ -164,4 +167,23 @@
     }
     
    
+}
+
+@media screen and (max-width: 450px){
+
+    .login-panel {
+        top: 200px;
+        right: 0px;
+        text-align: left;
+        margin-right: -150px;
+        background-color: rgba(193, 190, 190, 0.563);
+    }
+
+    .edit-complement{
+        padding-left: 15px;
+    }
+
+    .modal-dialog {
+        padding-right: 140px;
+    }
 }

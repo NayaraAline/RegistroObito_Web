@@ -97,7 +97,7 @@ tr:nth-child(even) {
     padding-right: 8px;
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (max-width: 1024px){
     
     .portar-container-conteudo {
         margin-left: 60px;

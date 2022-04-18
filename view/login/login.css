@@ -110,3 +110,21 @@
     background-color: rgb(240, 243, 243);
     color: black;
 }
+
+
+/*****************RESOLUÇÕES DE TELAS****************************/
+
+
+@media screen and (min-width: 1024px){
+    .login-panel {
+        position: absolute;
+        top: 28%;
+        right: 0px;
+        text-align: left;
+        padding-right: 15px;
+        padding-top: 0px;
+    }
+
+    
+
+}

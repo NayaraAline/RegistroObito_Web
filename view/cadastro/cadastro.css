@@ -83,3 +83,30 @@ option:empty {
 .btn-cadastrar:hover {
     background-color: rgb(47, 117, 181);
 }
+
+
+/*****************RESOLUÇÕES DE TELAS****************************/
+
+
+@media screen and (min-width: 1024px){
+    
+    .portar-container-conteudo {
+        margin-left: 60px;
+        margin-right: 15px;
+    }
+    
+    .form_cadatro{
+        padding-left: 0px; 
+    }
+
+     
+    .form_cadatro-2{
+        padding-left: 8px; 
+    }
+    
+
+    .form-inline .form-control{
+        width: 130px;
+    }
+
+}
